@@ -1,3 +1,3 @@
 def test_hello(client):
     response = client.get("/")
-    assert response.data == b"Hello, world!"
+    assert response.data == b"Hello, People!"
