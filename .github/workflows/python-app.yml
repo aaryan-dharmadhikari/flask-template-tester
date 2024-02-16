@@ -48,18 +48,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Build Tarball
-      uses: a7ul/tar-action@v1.1.0
-      with:
-        command: c
-        cwd: "./"
-        files: |
-          src/
-          requirements.txt
-          Dockerfile
-          captain-definition
-        outPath: deploy.tar
-
     - name: Deploy App to ImPaaS
       run: |
         curl --location --request \
